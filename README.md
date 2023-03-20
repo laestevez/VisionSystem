@@ -55,11 +55,3 @@ https://colab.research.google.com/drive/1RsylzAtXrJbDWdYRYt_aUFyMfdyvIyKN#scroll
 
 ## Yolov5 link
 - https://github.com/ultralytics/yolov5
-
-## Using boot bash scripts
-Our system uses the pre-installed startup application feature of the current ubuntu install on the jetson nano. In order to change what script is run or
-settings on that script, navigate to software in the start menu. From there find startup applications and find Vision System or add a new process. You can 
-then add a command to be run, this can include commands like bash. Using this we run bash on our desired script, for our purposes we used Boot.sh. ONe issue 
-of this method is that it does not keep a terminal window running for you. To combat that we use the xterm command in the boot.sh script to run the code in a 
-new window. Another issue with this method is that it will be run from the root directory which will result in different system paths to python directories 
-when running code. To fix this you can import sys and use sys.path.append() to force python to import libraries properly.
